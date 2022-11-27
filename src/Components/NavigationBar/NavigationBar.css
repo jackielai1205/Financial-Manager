@@ -1,0 +1,39 @@
+.NavBar {
+    background-color: aqua;
+    color: black;
+    min-height: 50px;
+    max-height: 200px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1rem;
+}
+
+a{
+    text-decoration: none;
+    color: inherit;
+    background-color: inherit;
+}
+
+.NavBar-title{
+    background-color: inherit;
+    font-size: x-large;
+    font-weight: bold;
+}
+
+.NavBar-containers{
+    background-color: inherit;
+    list-style: none;
+    display: flex;
+}
+
+.NavBar-item{
+    background-color: inherit;
+    font-size: larger;
+    padding: 0 10px;
+}
+
+.NavBar-containers li:hover{
+    color: blueviolet;
+}
+
