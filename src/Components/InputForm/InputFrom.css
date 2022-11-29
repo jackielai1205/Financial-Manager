@@ -1,0 +1,20 @@
+.text-field{
+    display: inline;
+    margin: 20px;
+}
+
+.form{
+    padding: 10px;
+    display: block;
+    align-items: center;
+}
+
+.form-row{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+.date-picker{
+    max-width: 220px;
+}

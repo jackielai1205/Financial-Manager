@@ -1,8 +1,9 @@
+import TransitionsTable from "../Components/TransitionsTable/TransitionsTable"
 
 function TransitionPage() {
     return (
         <div className="Page">
-            This is transition
+            <TransitionsTable />
         </div>
     );
 }

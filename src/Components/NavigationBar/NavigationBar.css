@@ -1,8 +1,6 @@
 .NavBar {
     background-color: aqua;
     color: black;
-    min-height: 50px;
-    max-height: 200px;
     display: flex;
     justify-content: space-between;
     align-items: center;

@@ -1,11 +1,16 @@
 .App {
-  text-align: center;
-}
 
-*{
-  background: #282c34;
 }
 
 .Page{
-  color: white;
+  color: black;
+}
+body{
+  background-color: #282c34;
+}
+
+.table{
+  margin: 20px;
+  height: 400px;
+  background-color: white;
 }

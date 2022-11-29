@@ -1,8 +1,9 @@
+import InputFrom from '../Components/InputForm/InputForm'
 
 function InsertPage() {
     return (
         <div className="Page">
-            This is insert page
+             <InputFrom/>
         </div>
     );
 }
