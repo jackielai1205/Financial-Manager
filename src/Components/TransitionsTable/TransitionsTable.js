@@ -31,16 +31,20 @@ const rows = [
 ];
 
 
-const TransitionsTable = () => (
-    <div className="table">
-        <DataGrid
-            rows={rows}
-            columns={columns}
-            pageSize={5}
-            rowsPerPageOptions={[10]}
-            checkboxSelection
-        />
-    </div>
-);
+function TransitionsTable(){
+    return (
+        <div className="table">
+            <DataGrid
+                rows={rows}
+                columns={columns}
+                pageSize={5}
+                rowsPerPageOptions={[10]}
+                checkboxSelection
+            />
+        </div>
+    )
+}
+
+
 
 export default TransitionsTable;
