@@ -6,7 +6,9 @@ import FormControl from '@mui/material/FormControl';
 import OutlinedInput from '@mui/material/OutlinedInput';
 import InputAdornment from '@mui/material/InputAdornment';
 import { DatePicker } from "react-rainbow-components";
-import './InputFrom.css'
+import axios from 'axios';
+import Transition from '../../Model/Transition';
+import './InputFrom.css';
 
 function InputForm() {
 
@@ -53,6 +55,12 @@ function InputForm() {
             state.essential = !state.essential;
             return state;
         })
+    }
+
+    const submitForm = async () => {
+        const transition = new Transition(state.transitionName, state.transitionDescription, state.amount, state.category, state.essential, state.date);
+        console.log(transition);
+        //axios.post("http://localhost:3001/insert-transition");
     }
 
     return (
@@ -140,9 +148,7 @@ function InputForm() {
                         </div>
                     </div>
                     <div className="form-row">
-                        <Button variant="contained" onClick={()=>{
-                            console.log(state);
-                        }}>Submit</Button>
+                        <Button variant="contained" onClick={submitForm}>Submit</Button>
                     </div>
                 </div>
         </div>
