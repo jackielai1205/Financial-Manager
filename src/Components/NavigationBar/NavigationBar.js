@@ -8,7 +8,7 @@ function NavigationBar() {
             <ul className="NavBar-containers">
                 <Link to="/dashboard"><li className="NavBar-item">Dashboard</li></Link>
                 <Link to="/insert"><li className="NavBar-item">Insert</li></Link>
-                <Link to="/transition"><li className="NavBar-item">Transition</li></Link>
+                <Link to="/transactions"><li className="NavBar-item">Transactions</li></Link>
             </ul>
         </div>
     );

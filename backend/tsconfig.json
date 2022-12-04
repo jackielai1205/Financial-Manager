@@ -1,0 +1,16 @@
+{
+  "compilerOptions": {
+    "lib": ["es2015"],
+    "module": "commonjs",
+    "noImplicitAny": false,
+    "removeComments": true,
+    "preserveConstEnums": true,
+    "sourceMap": true,
+    "allowJs": true,
+    "outDir": "dist"
+  },
+  "include": [
+    "src/**/*.ts",
+    "src/**/*.js"
+  ]
+}

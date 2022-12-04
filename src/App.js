@@ -2,7 +2,7 @@ import './App.css';
 import NavigationBar from "./Components/NavigationBar/NavigationBar";
 import DashboardPage from "./Pages/DashboardPage";
 import InsertPage from "./Pages/InsertPage";
-import TransitionPage from "./Pages/TransitionPage";
+import TransactionPage from "./Pages/TransactionPage";
 import {Route, Routes} from "react-router-dom"
 
 function App() {
@@ -12,7 +12,7 @@ function App() {
         <Routes>
             <Route path="/dashboard" element={<DashboardPage/>}/>
             <Route path="/insert" element={<InsertPage/>}/>
-            <Route path="/transition" element={<TransitionPage/>}/>
+            <Route path="/transactions" element={<TransactionPage/>}/>
         </Routes>
     </div>
   );

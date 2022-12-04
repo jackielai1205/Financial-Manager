@@ -1,0 +1,12 @@
+.doughnut-container{
+    align-items: center;
+}
+
+.doughnut-title{
+    font-family: Georgia, serif;
+    font-size: 20px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+}

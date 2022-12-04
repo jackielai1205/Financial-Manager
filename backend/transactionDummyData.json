@@ -1,0 +1,15 @@
+{
+  "transactions":[
+    {"id": 1, "transactionName": "Buy lunch", "transactionDescription": "Buy macdonald", "amount": 9, "categories": "food", "essential": "No", "date": "29 Nov 2022"},
+    {"id": 2, "transactionName": "Purchase a car", "transactionDescription": "Mazda Demio", "amount": 11000, "categories": "food", "essential": "Yes", "date": "29 Nov 2022"},
+    {"id": 3, "transactionName": "Buy groceries", "transactionDescription": "Egg, Fish", "amount": 120, "categories": "food", "essential": "Yes", "date": "12 Nov 2022"},
+    {"id": 4, "transactionName": "Buy dinner", "transactionDescription": "Korean Food", "amount": 120, "categories": "food", "essential": "No", "date": "15 Dec 2022"},
+    {"id": 5, "transactionName": "Buy groceries", "transactionDescription": "Bread", "amount": 2, "categories": "food", "essential": "Yes", "date": "11 Nov 2022"},
+    {"id": 6, "transactionName": "Buy lunch", "transitionDescription": "Buy macdonald", "amount": 9, "categories": "food", "essential": "No", "date": "29 Nov 2022"},
+    {"id": 7, "transactionName": "Purchase a car", "transactionDescription": "Mazda Demio", "amount": 11000, "categories": "food", "essential": "Yes", "date": "29 Nov 2022"},
+    {"id": 8, "transactionName": "Buy groceries", "transactionDescription": "Egg, Fish", "amount": 120, "categories": "food", "essential": "Yes", "date": "12 Nov 2022"},
+    {"id": 9, "transactionName": "Buy dinner", "transactionDescription": "Korean Food", "amount": 120, "categories": "food", "essential": "No", "date": "15 Dec 2022"},
+    {"id": 10, "transactionName": "Buy groceries", "transactionDescription": "Bread", "amount": 2, "categories": "food", "essential": "Yes", "date": "11 Nov 2022"}
+  ]
+}
+

@@ -1,0 +1,15 @@
+.dashboard{
+    /*background-color: black;*/
+    width: 80%;
+    display: flex;
+    margin: 10px auto;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.dashboard-content{
+    display: block;
+    background-color: white;
+    width: 30%;
+    padding: 10px;
+}

@@ -1,13 +1,12 @@
 import React from 'react';
 import InputLabel from '@mui/material/InputLabel';
-import { styled } from '@mui/material/styles';
-import {Button, FormGroup, MenuItem, Select, Stack, Switch, TextField, Typography} from "@mui/material";
+import {Button, FormGroup, MenuItem, Select, Switch, TextField} from "@mui/material";
 import FormControl from '@mui/material/FormControl';
 import OutlinedInput from '@mui/material/OutlinedInput';
 import InputAdornment from '@mui/material/InputAdornment';
 import { DatePicker } from "react-rainbow-components";
 import axios from 'axios';
-import Transition from '../../Model/Transition';
+import Transaction from '../../Model/Transaction';
 import './InputFrom.css';
 
 function InputForm() {
@@ -16,8 +15,8 @@ function InputForm() {
             category:"",
             date: new Date(),
             amount: "",
-            transitionName: "",
-            transitionDescription: "",
+            transactionName: "",
+            transactionDescription: "",
             essential: true
     });
 
@@ -31,14 +30,14 @@ function InputForm() {
     const changeTransitionName = (event) =>{
         setState(prevState => {
             let state = Object.assign({}, prevState);
-            state.transitionName = event.target.value;
+            state.transactionName = event.target.value;
             return state;
         });
     };
     const changeTransitionDescription = (event) =>{
         setState(prevState => {
             let state = Object.assign({}, prevState);
-            state.transitionDescription = event.target.value;
+            state.transactionDescription = event.target.value;
             return state;
         });
     };
@@ -58,9 +57,15 @@ function InputForm() {
     }
 
     const submitForm = async () => {
-        const transition = new Transition(state.transitionName, state.transitionDescription, state.amount, state.category, state.essential, state.date);
-        console.log(transition);
-        //axios.post("http://localhost:3001/insert-transition");
+        const transaction = new Transaction(state.transactionName, state.transactionDescription, state.amount, state.category, state.essential, state.date);
+        console.log(transaction);
+        try{
+            await axios.post("http://localhost:3001/insert-transaction", transaction);
+            alert("Transaction Inserted");
+        }catch(e){
+            console.log(e);
+        }
+
     }
 
     return (
@@ -70,9 +75,9 @@ function InputForm() {
                         <div className="text-field">
                             <TextField
                                 id="outlined-basic"
-                                label="Transition Name"
+                                label="Transaction Name"
                                 variant="outlined"
-                                value={state.transitionName}
+                                value={state.transactionName}
                                 onChange={changeTransitionName}
                             />
                         </div>
@@ -110,10 +115,10 @@ function InputForm() {
                         <FormControl fullWidth sx={{ m: 1, maxWidth: "670px" }}>
                             <TextField
                                 id="outlined-multiline-static"
-                                label="Transition Description"
+                                label="Transaction Description"
                                 multiline
                                 rows={4}
-                                value={state.transitionDescription}
+                                value={state.transactionDescription}
                                 onChange={changeTransitionDescription}
                             />
                         </FormControl>
@@ -136,7 +141,7 @@ function InputForm() {
                                     value={state.date}
                                     minDate={new Date(2021, 10, 30)}
                                     maxDate={new Date(2022, 11, 30)}
-                                    label="Transition date"
+                                    label="Transaction date"
                                     onChange={value => setState(prevState => {
                                         let state = Object.assign({}, prevState);
                                         state.date = value;
