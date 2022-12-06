@@ -14,7 +14,7 @@ function InputForm() {
     const [state, setState] = React.useState({
             category:"",
             date: new Date(),
-            amount: "",
+            amount: 0,
             transactionName: "",
             transactionDescription: "",
             essential: true
@@ -57,7 +57,7 @@ function InputForm() {
     }
 
     const submitForm = async () => {
-        const transaction = new Transaction(state.transactionName, state.transactionDescription, state.amount, state.category, state.essential, state.date);
+        const transaction = new Transaction(state.transactionName, state.transactionDescription, parseInt(state.amount), state.category, state.essential, state.date);
         console.log(transaction);
         try{
             await axios.post("http://localhost:3001/insert-transaction", transaction);

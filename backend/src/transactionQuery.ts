@@ -25,10 +25,21 @@ router.post('/delete-transaction', (async (req, res)=>{
 }))
 
 //transactions/essential//
-router.post('/essential', (async (req, res)=>{
+router.get('/essential', (async (req, res)=>{
     const essential = await collection.aggregate([{$group:{_id: "$essential", sum:{$sum: 1}}}]).toArray();
     res.end(essential);
     //db.collection.aggregate([{$group: {_id:"$groupField", sum_val:{$sum:"$valueField"}}}])
+}))
+
+//transactions/total-cost//
+router.get('/total-cost', (async (req, res)=>{
+    const totalCost = await collection.aggregate([{ $match: {} },{$group:{_id: null, sum:{$sum: "$amount"}}}]).toArray();
+    const response = {
+        totalCost: totalCost[0].sum
+    }
+    console.log(response);
+    res.send(response)
+    res.end();
 }))
 
 export default router;

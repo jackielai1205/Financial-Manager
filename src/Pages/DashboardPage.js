@@ -14,7 +14,6 @@ class DashboardPage extends React.Component{
                 <div className="dashboard">
                     <div className="dashboard-content">
                         <DoughnutChart data={{
-                            transition: "hi",
                             title: "Total cost"
                         }}/>
                         <DoughnutChart data={{
